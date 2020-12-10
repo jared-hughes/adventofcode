@@ -1,0 +1,22 @@
+{
+  "name": "2020",
+  "version": "1.0.0",
+  "description": "JavaScript solutions are run with node `v10.19.0` via Script package in Atom.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/jared-hughes/adventofcode"
+  },
+  "author": "Jared Hughes",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "lodash.combinations": "^18.10.0",
+    "lodash.multicombinations": "^1.0.0",
+    "lodash.multipermutations": "^1.0.0",
+    "lodash.permutations": "^1.0.0",
+    "lodash.product": "^18.9.19"
+  }
+}

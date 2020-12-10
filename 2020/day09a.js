@@ -1,5 +1,10 @@
 const fs = require('fs')
-import {qsort, int, print, sum, product, min, max, deepClone, isEmptyObject} from './resources.js'
+// All imported in advance because typing speed
+import {
+  int, print, sum, product, chr, ord, isAllEqual, isIncreasing,
+  isStrictlyIncreasing, isDecreasing, isStrictlyDecreasing, increments,
+  allDistinct
+} from '../utils/utils.js'
 
 fs.promises.readFile("day09.in", {encoding: 'utf8'})
   .then((dataString) => {

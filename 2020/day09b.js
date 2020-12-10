@@ -1,5 +1,11 @@
 const fs = require('fs')
-import {qsort, int, print, sum, product, min, max, deepClone, isEmptyObject} from './resources.js'
+const _ = require('lodash')
+// All imported in advance because typing speed
+import {
+  int, print, sum, product, chr, ord, isAllEqual, isIncreasing,
+  isStrictlyIncreasing, isDecreasing, isStrictlyDecreasing, increments,
+  allDistinct
+} from '../utils/utils.js'
 
 fs.promises.readFile("day09.in", {encoding: 'utf8'})
   .then((dataString) => {
@@ -32,7 +38,7 @@ function solve(L) {
       for (let j=0; j<L.length; j++) {
         for (let k=j+2; k<L.length; k++) {
           if (sums[k] - sums[j] == L[i]) {
-            print(min(L.slice(j,k)) + max(L.slice(j,k)));
+            print(_.min(L.slice(j,k)) + _.max(L.slice(j,k)));
           }
         }
       }
