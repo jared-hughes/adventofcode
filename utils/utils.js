@@ -5,6 +5,7 @@ const _ = require('lodash');
 // parseInt("1100", 2) => 12
 
 module.exports = {
+  sort: arr => _.sortBy(arr, x=>x),
   // fixes headache in past due to arr.map(parseInt) applying parseInt(element, index, array)
   // Ooh this would be same as _.ary(parseInt, 1)
   int: s => parseInt(s, 10),
