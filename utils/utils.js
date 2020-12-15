@@ -11,6 +11,7 @@ module.exports = {
   int: s => parseInt(s, 10),
   // faster to type and return starting value. I would use log except it looks too much like Math.log
   print: e => {console.log(e); return e},
+  clog: console.log,
   // bunch of faster-to-type functional programming patterns
   // sum repeats lodash, but product does not
   sum: numbers => numbers.reduce((acc, e) => acc+e),
