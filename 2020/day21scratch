@@ -1,0 +1,24 @@
+[Command: bash -c ''/home/jared/.atom/packages/script/node_modules/.bin/babel' --filename '/home/jared/.atom/packages/script/node_modules/.bin/babel' < '/home/jared/adventofcode/2020/day21b.js'| node']
+Set(8) {
+  'shellfish',
+  'sesame',
+  'fish',
+  'nuts',
+  'dairy',
+  'soy',
+  'wheat',
+  'peanuts'
+}
+[
+  [ 'dairy', [ tmp' ] ],
+  [ 'fish', [ 'pdpgm', '', ' ] ],
+  [ 'nuts', [ 'cdslv', '' ] ],
+  [ 'peanuts', [ ' ', 'zrvtg' ] ],
+  [ 'sesame', [ 'ttkn' ] ],
+  [ 'shellfish', [ 'mkpmkx', '' ] ],
+  [ 'soy', [ '', '', '', 'vxzpfp' ] ],
+  [ 'wheat', [ '', 'flnhl', '' ] ]
+]
+2704
+[Finished in 0.703s]
+tmp,pdpgm,cdslv,zrvtg,ttkn,mkpmkx,vxzpfp,flnhl
