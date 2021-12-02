@@ -5,6 +5,7 @@ For contests I did in real-time, I may have edited them slightly afterward, but 
 
 Notes on contests I did:
 
-| Contest Number | End Time 1 | Rank 1 | End Time 2 | Rank 2 | Notes                                     | Learned                                                                                                                        |
-| -------------- | ---------: | :----- | ---------: | :----- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 1              |      02:47 | 1242   |      04:25 | 462    | Messed up with off-by-one error in part 1 | Don't mess with `arr.slice().map((e,i) => ...)`. Just avoid using sliced indices and sliced elements elements at the same time |
+| Contest Number | End Time 1 | Rank 1 | End Time 2 | Rank 2 | Notes                                                  | Learned                                                                                                                        |
+| -------------- | ---------: | :----- | ---------: | :----- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| 1              |      02:47 | 1242   |      04:25 | 462    | Messed up with off-by-one error in part 1              | Don't mess with `arr.slice().map((e,i) => ...)`. Just avoid using sliced indices and sliced elements elements at the same time |
+| 2              |      02:38 | 644    |      03:35 | 232    | No big issues, but barely remembered to log on in time | Do `line.split(" ")` instead of `line.startsWith(...)` ...                                                                     |
