@@ -15,3 +15,4 @@ Notes on contests I did:
 | 6              |      09:13 | 2633   |      09:27 | 411    | Pasted the input file wrong. Had to re-save it or something. Annoying                                                     |
 | 7              |      04:42 | 12743  |      07:34 | 960    |
 | 8              |      05:11 | 308    |      17:28 | 57     |                                                                                                                           | lists → `includes`, strings → `contains`. Also `_.permutations` takes the length of the permutation as second paremeter.       |
+| 9              |      05:40 | 437    |      25:31 | 1330   | Used the wrong input file for a while. Also for some reason, my first approach for part 2 didn't work                     |
