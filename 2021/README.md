@@ -16,3 +16,4 @@ Notes on contests I did:
 | 7              |      04:42 | 12743  |      07:34 | 960    |
 | 8              |      05:11 | 308    |      17:28 | 57     |                                                                                                                           | lists → `includes`, strings → `contains`. Also `_.permutations` takes the length of the permutation as second paremeter.       |
 | 9              |      05:40 | 437    |      25:31 | 1330   | Used the wrong input file for a while. Also for some reason, my first approach for part 2 didn't work                     |
+| 10             |      07:05 | 674    |      10:15 | 250    | Used the same name for both `score` function and `score` map.                                                             | Put helper variables inside the functions to avoid scoping issues                                                              |
