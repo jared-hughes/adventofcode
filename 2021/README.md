@@ -20,3 +20,4 @@ Notes on contests I did:
 | 11             |      09:39 | 167    |      11:45 | 196    | 1-indexing whyy                                                                                                           | just use `X in [max(y-1,0), min(y+2,9))` instead of `dx in [-1,2); X = x+dx; if ...`                                           |
 | 12             |      07:07 | 139    |      34:53 | 1563   | Kept using the wrong inputs ugh                                                                                           |
 | 13             |      19:43 | 1727   |      21:19 | 1007   |                                                                                                                           |
+| 14             |      08:33 | 558    |      08:48 | 21     | Wasn't logged in at the start, oops. But turned out great!                                                                |
