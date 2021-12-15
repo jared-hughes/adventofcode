@@ -21,3 +21,4 @@ Notes on contests I did:
 | 12             |      07:07 | 139    |      34:53 | 1563   | Kept using the wrong inputs ugh                                                                                           |
 | 13             |      19:43 | 1727   |      21:19 | 1007   |                                                                                                                           |
 | 14             |      08:33 | 558    |      08:48 | 21     | Wasn't logged in at the start, oops. But turned out great!                                                                |
+| 15             |      27:08 | 1704   |      45:28 | 1334   | Grr Javascript Dijkstra                                                                                                   |                                                                                                                                |
