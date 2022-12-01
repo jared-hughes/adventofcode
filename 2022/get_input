@@ -1,0 +1,17 @@
+#!/bin/bash -e
+
+# Read AOC_SESSION_COOKIE from .env
+export $(cat .env | xargs)
+# Safety check
+if (($# < 1)); then
+  echo "Did you forget to pass in a day?"
+  echo "Usage: ./get_input [day]"
+  exit 1
+fi
+# Input. Remove leading zeros, if any
+DAY="${1##0}"
+# Zero-pad to 2 digits
+FILEOUT="day$[DAY/10]$[DAY%10].in"
+# Curl time!
+curl "https://adventofcode.com/2022/day/$DAY/input" \
+  -H "cookie: session=$AOC_SESSION_COOKIE" > "$FILEOUT"
