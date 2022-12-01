@@ -1,0 +1,5 @@
+#!/bin/bash -e
+OUTFILE="dist/${1//.ts/.js}"
+./node_modules/.bin/esbuild $1 --outfile="$OUTFILE" --bundle --platform=node \
+  --format=iife --log-level=warning
+node $OUTFILE

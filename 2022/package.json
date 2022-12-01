@@ -1,0 +1,17 @@
+{
+  "name": "2022",
+  "version": "1.0.0",
+  "description": "Javscript solutions to 2022 advent of code",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jared-hughes/adventofcode.git"
+  },
+  "author": "Jared Hughes",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "esbuild": "^0.15.16",
+    "prettier": "^2.8.0"
+  }
+}
