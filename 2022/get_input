@@ -14,4 +14,5 @@ DAY="${1##0}"
 FILEOUT="day$[DAY/10]$[DAY%10].in"
 # Curl time!
 curl "https://adventofcode.com/2022/day/$DAY/input" \
-  -H "cookie: session=$AOC_SESSION_COOKIE" > "$FILEOUT"
+  -H "cookie: session=$AOC_SESSION_COOKIE" > "$FILEOUT" \
+  --user-agent "https://github.com/jared-hughes/adventofcode/blob/master/2022/get_input"
