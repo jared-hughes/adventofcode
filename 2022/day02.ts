@@ -1,9 +1,7 @@
-import { readFileSync } from "fs";
-import { int, clog, sum } from "./utils";
+import { int, clog, sum, getInput } from "./utils";
 
-let dataString = readFileSync("day02.in", { encoding: "utf-8" })
-  // Remove the last character (the closing newline)
-  .slice(0, -1);
+let dataString = getInput("day02.in");
+
 let L = dataString.split(/\n/);
 
 // Part 1

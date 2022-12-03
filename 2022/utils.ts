@@ -1,3 +1,11 @@
+import { readFileSync } from "fs";
+export function getInput(filename: string) {
+  return (
+    readFileSync(filename, { encoding: "utf-8" })
+      // Remove the last character (the closing newline)
+      .slice(0, -1)
+  );
+}
 export const sort = (arr: number[]) => arr.sort((a, b) => a - b);
 export const sortByKey = <T>(a: T[], key: (v: T) => number) =>
   a.sort((u, v) => key(u) - key(v));

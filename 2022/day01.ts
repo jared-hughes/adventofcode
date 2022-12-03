@@ -1,9 +1,7 @@
-import { readFileSync } from "fs";
-import { sort, max, int, clog, sum } from "./utils";
+import { sort, max, int, clog, sum, getInput } from "./utils";
 
-let dataString = readFileSync("day01.in", { encoding: "utf-8" })
-  // Remove the last character (the trailing newline)
-  .slice(0, -1);
+let dataString = getInput("day01.in");
+
 let L = dataString.split(/\n\n/g).map((a) => sum(a.split(/\n/g).map(int)));
 
 // Part 1

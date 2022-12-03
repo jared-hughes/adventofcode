@@ -1,12 +1,9 @@
-import { readFileSync } from "fs";
-import { clog, sum, ord, intersect, slices } from "./utils";
+import { clog, sum, ord, intersect, slices, getInput } from "./utils";
 
-let dataString = readFileSync("day03.in", { encoding: "utf-8" })
-  // Remove the last character (the closing newline)
-  .slice(0, -1);
+let dataString = getInput("day03.in");
 
 let rows = dataString
-  .split(/\n/)
+  .split("\n")
   .map((row) =>
     [...row].map((x) =>
       x < "a" ? ord(x) - ord("A") + 27 : ord(x) - ord("a") + 1
