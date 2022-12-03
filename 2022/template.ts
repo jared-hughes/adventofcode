@@ -1,4 +1,5 @@
 import { readFileSync } from "fs";
+import * as math from "mathjs";
 // prettier-ignore
 import {
   getInput, sort, sortByKey, max, min, int, clog, print, sum, prod, chr, ord, isAllEqual,
@@ -7,8 +8,6 @@ import {
   cartesianProduct, set, intersect, setdiff, symdiff, union
 } from "./utils";
 
-let dataString = readFileSync("day00.in", { encoding: "utf-8" })
-  // Remove the last character (the closing newline)
-  .slice(0, -1);
+let dataString = getInput("day00.in");
 
 clog(dataString.split(/\n/g));

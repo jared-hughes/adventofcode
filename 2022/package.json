@@ -13,5 +13,8 @@
     "@types/node": "^18.11.10",
     "esbuild": "^0.15.16",
     "prettier": "^2.8.0"
+  },
+  "dependencies": {
+    "mathjs": "^11.4.0"
   }
 }
