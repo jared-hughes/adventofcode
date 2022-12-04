@@ -1,4 +1,3 @@
-import { readFileSync } from "fs";
 import * as math from "mathjs";
 // prettier-ignore
 import {
