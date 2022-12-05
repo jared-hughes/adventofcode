@@ -93,3 +93,13 @@ export function setdiff<T>(a: Iterable<T>, b: Iterable<T>) {
 export function symdiff<T>(a: Iterable<T>, b: Iterable<T>) {
   return setdiff(a, b).concat(setdiff(b, a));
 }
+export function sliceStepped<T>(a: Iterable<T>, start: number, step: number) {
+  const L = [...a];
+  if (start >= L.length)
+    throw new Error("Out of bounds sliceSpaced to the right");
+  if (start < 0) start += L.length;
+  if (start < 0) throw new Error("Out of bounds sliceSpaced to the left");
+  return range(((L.length + step - 1 - start) / step) | 0).map(
+    (i) => L[i * step + start]
+  );
+}

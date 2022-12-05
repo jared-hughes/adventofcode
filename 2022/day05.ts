@@ -1,4 +1,11 @@
-import { getInput, ints, clog, reverse, range, transpose } from "./utils";
+import {
+  getInput,
+  ints,
+  clog,
+  reverse,
+  transpose,
+  sliceStepped,
+} from "./utils";
 
 let dataString = getInput("day05.in");
 
@@ -9,11 +16,7 @@ const inputStacks = [
     stacks
       .split("\n")
       .slice(0, -1)
-      .map((line) =>
-        range((line.length / 4 + 1) | 0)
-          .map((i) => line[i * 4 + 1])
-          .reverse()
-      )
+      .map((line) => sliceStepped(line, 1, 4).reverse())
       .reverse()
   )
     .map((e) => e.join("").trimEnd())
