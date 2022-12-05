@@ -14,6 +14,9 @@ export const max = (arr: number[]) =>
 export const min = (arr: number[]) =>
   arr.reduce((a, b) => Math.min(a, b), Infinity);
 export const int = (s: string) => parseInt(s, 10);
+export const ints = (s: string) =>
+  [...s.matchAll(/-?\d+/g)].map((v) => int(v[0]));
+export const reverse = (s: string) => [...s].reverse().join("");
 export const clog = console.log;
 // single-argument print, returning given value
 export const print = <T>(s: T) => (clog(s), s);
@@ -36,11 +39,13 @@ export const overlappingSlices = (a: number[], n: number) =>
 export const slices = <T>(a: T[], n: number) =>
   range(a.length / n).map((i) => a.slice(i * n, i * n + n));
 export const range = (n: number) => [...Array(n).keys()];
+export const range2 = (lo: number, hi: number) =>
+  range(hi - lo).map((x) => x + lo);
 export const transpose = <T>(a: T[][]) =>
   range(Math.min(...a.map((row) => row.length))).map((i) =>
     a.map((row) => row[i])
   );
-export const uniq = <T>(a: T[]) => [...new Set(a)];
+export const uniq = <T>(a: Iterable<T>) => [...set(a)];
 export const dropAtIndex = <T>(a: T[], i: number) =>
   a.slice(0, i).concat(a.slice(i + 1));
 /** Permutations of `s` of length `n` */
