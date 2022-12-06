@@ -1,4 +1,6 @@
 import { readFileSync } from "fs";
+
+/* Misc */
 export function getInput(filename: string) {
   return (
     readFileSync(filename, { encoding: "utf-8" })
@@ -6,7 +8,11 @@ export function getInput(filename: string) {
       .slice(0, -1)
   );
 }
-/* Parsing functions */
+/** single-argument print, returning given value */
+export const print = <T>(s: T) => (clog(s), s);
+export const clog = console.log;
+
+/* Strings */
 export const int = (s: string) => parseInt(s, 10);
 export const ints = (s: string) =>
   [...s.matchAll(/[-+]?\d+/g)].map((v) => int(v[0]));
@@ -19,6 +25,9 @@ export const unsigned_floats = (s: string) =>
   [...s.matchAll(/\d+(?:\.\d+)/)].map((v) => float(v[0]));
 export const words = (s: string) =>
   [...s.matchAll(/[a-zA-Z]+/)].map((v) => v[0]);
+export const chr = (v: number) => String.fromCodePoint(v);
+export const ord = (s: string) => s.codePointAt(0) as number;
+export const reverse = (s: string) => [...s].reverse().join("");
 
 /* Arrays */
 export const sort = (arr: number[]) => arr.sort((a, b) => a - b);
@@ -28,14 +37,8 @@ export const max = (arr: number[]) =>
   arr.reduce((a, b) => Math.max(a, b), -Infinity);
 export const min = (arr: number[]) =>
   arr.reduce((a, b) => Math.min(a, b), Infinity);
-export const reverse = (s: string) => [...s].reverse().join("");
-export const clog = console.log;
-// single-argument print, returning given value
-export const print = <T>(s: T) => (clog(s), s);
 export const sum = (s: number[]) => s.reduce((a, b) => a + b, 0);
 export const prod = (s: number[]) => s.reduce((a, b) => a * b, 1);
-export const chr = (v: number) => String.fromCodePoint(v);
-export const ord = (s: string) => s.codePointAt(0) as number;
 export const isAllEqual = (a: any[]) =>
   a.length === 0 || a.every((e) => e === a[0]);
 export const isIncreasing = (a: number[]) =>
@@ -53,15 +56,27 @@ export const slices = <T>(a: T[], n: number) =>
 export const range = (n: number) => [...Array(n).keys()];
 export const range2 = (lo: number, hi: number) =>
   range(hi - lo).map((x) => x + lo);
+export function sliceStepped<T>(a: Iterable<T>, start: number, step: number) {
+  const L = [...a];
+  if (start >= L.length)
+    throw new Error("Out of bounds sliceSpaced to the right");
+  if (start < 0) start += L.length;
+  if (start < 0) throw new Error("Out of bounds sliceSpaced to the left");
+  return range(((L.length + step - 1 - start) / step) | 0).map(
+    (i) => L[i * step + start]
+  );
+}
+export const uniq = <T>(a: Iterable<T>) => [...set(a)];
+export const dropAtIndex = <T>(a: T[], i: number) =>
+  a.slice(0, i).concat(a.slice(i + 1));
+
+/* 2D arrays */
 export const transpose = <T>(a: T[][]) =>
   range(Math.min(...a.map((row) => row.length))).map((i) =>
     a.map((row) => row[i])
   );
-export const uniq = <T>(a: Iterable<T>) => [...set(a)];
-export const dropAtIndex = <T>(a: T[], i: number) =>
-  a.slice(0, i).concat(a.slice(i + 1));
 /** Permutations of `s` of length `n` */
-export function permutations<T>(a: T[], n: number = a.length) {
+export function permutations<T>(a: T[], n: number = a.length): T[][] {
   if (n > a.length)
     throw new Error(
       `Cannot take a permutation of length ${n} from a list of length ${a.length}`
@@ -85,6 +100,8 @@ export function cartesianProduct<T>(...a: T[][]): T[][] {
 export function cartesianPower<T>(a: T[], n: number) {
   return cartesianProduct(...range(n).map((_) => a));
 }
+
+/* Sets */
 export const set = <T>(a: Iterable<T>) => new Set(a);
 export function intersect<T>(...s: Iterable<T>[]): T[] {
   if (s.length === 0)
@@ -104,14 +121,4 @@ export function setdiff<T>(a: Iterable<T>, b: Iterable<T>) {
 }
 export function symdiff<T>(a: Iterable<T>, b: Iterable<T>) {
   return setdiff(a, b).concat(setdiff(b, a));
-}
-export function sliceStepped<T>(a: Iterable<T>, start: number, step: number) {
-  const L = [...a];
-  if (start >= L.length)
-    throw new Error("Out of bounds sliceSpaced to the right");
-  if (start < 0) start += L.length;
-  if (start < 0) throw new Error("Out of bounds sliceSpaced to the left");
-  return range(((L.length + step - 1 - start) / step) | 0).map(
-    (i) => L[i * step + start]
-  );
 }

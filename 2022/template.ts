@@ -1,10 +1,15 @@
 import * as math from "mathjs";
 // prettier-ignore
 import {
-  getInput, sort, sortByKey, max, min, int, ints, clog, print, sum, prod, chr, ord, isAllEqual,
-  isIncreasing, isStrictlyDecreasing, isStrictlyIncreasing, overlappingSlices, slices,
-  range, transpose, uniq, dropAtIndex, permutations, cartesianPower,
-  cartesianProduct, set, intersect, setdiff, symdiff, union, reverse
+  /* Misc */ getInput, print, clog,
+  /* Strings */ int, ints, unsigned_ints, float, floats, unsigned_floats,
+  words, chr, ord, reverse,
+  /* Arrays */ sort, sortByKey, max, min, sum, prod, isAllEqual, isIncreasing,
+  isStrictlyIncreasing, isDecreasing, isStrictlyDecreasing, overlappingSlices,
+  slices, range, range2, sliceStepped, uniq, dropAtIndex,
+  /* 2D Arrays */ transpose, permutations, cartesianProduct, cartesianPower,
+  /* Sets */ set, intersect, union, setdiff, symdiff
+
 } from "./utils";
 
 let dataString = getInput("day00.in");
