@@ -41,6 +41,7 @@ export const sum = (s: number[]) => s.reduce((a, b) => a + b, 0);
 export const prod = (s: number[]) => s.reduce((a, b) => a * b, 1);
 export const isAllEqual = (a: any[]) =>
   a.length === 0 || a.every((e) => e === a[0]);
+export const isAllDistinct = (a: any[]) => set(a).size === a.length;
 export const isIncreasing = (a: number[]) =>
   a.every((e, i) => i == 0 || e >= a[i - 1]);
 export const isStrictlyIncreasing = (a: number[]) =>
@@ -49,7 +50,7 @@ export const isDecreasing = (a: number[]) =>
   a.every((e, i) => i == 0 || e <= a[i - 1]);
 export const isStrictlyDecreasing = (a: number[]) =>
   a.every((e, i) => i == 0 || e < a[i - 1]);
-export const overlappingSlices = (a: number[], n: number) =>
+export const overlappingSlices = <T>(a: T[], n: number) =>
   a.slice(n - 1).map((_, i) => a.slice(i, i + n));
 export const slices = <T>(a: T[], n: number) =>
   range(a.length / n).map((i) => a.slice(i * n, i * n + n));
