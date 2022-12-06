@@ -6,6 +6,21 @@ export function getInput(filename: string) {
       .slice(0, -1)
   );
 }
+/* Parsing functions */
+export const int = (s: string) => parseInt(s, 10);
+export const ints = (s: string) =>
+  [...s.matchAll(/[-+]?\d+/g)].map((v) => int(v[0]));
+export const unsigned_ints = (s: string) =>
+  [...s.matchAll(/\d+/g)].map((v) => int(v[0]));
+export const float = (s: string) => parseFloat(s);
+export const floats = (s: string) =>
+  [...s.matchAll(/[-+]?\d+(?:\.\d+)/)].map((v) => float(v[0]));
+export const unsigned_floats = (s: string) =>
+  [...s.matchAll(/\d+(?:\.\d+)/)].map((v) => float(v[0]));
+export const words = (s: string) =>
+  [...s.matchAll(/[a-zA-Z]+/)].map((v) => v[0]);
+
+/* Arrays */
 export const sort = (arr: number[]) => arr.sort((a, b) => a - b);
 export const sortByKey = <T>(a: T[], key: (v: T) => number) =>
   a.sort((u, v) => key(u) - key(v));
@@ -13,9 +28,6 @@ export const max = (arr: number[]) =>
   arr.reduce((a, b) => Math.max(a, b), -Infinity);
 export const min = (arr: number[]) =>
   arr.reduce((a, b) => Math.min(a, b), Infinity);
-export const int = (s: string) => parseInt(s, 10);
-export const ints = (s: string) =>
-  [...s.matchAll(/-?\d+/g)].map((v) => int(v[0]));
 export const reverse = (s: string) => [...s].reverse().join("");
 export const clog = console.log;
 // single-argument print, returning given value
