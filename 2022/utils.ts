@@ -53,9 +53,16 @@ export const overlappingSlices = (a: number[], n: number) =>
   a.slice(n - 1).map((_, i) => a.slice(i, i + n));
 export const slices = <T>(a: T[], n: number) =>
   range(a.length / n).map((i) => a.slice(i * n, i * n + n));
+/** 0, 1, 2, ..., n-1 */
 export const range = (n: number) => [...Array(n).keys()];
+/** lo, lo + 1, lo + 2, ... hi - 1 (exclusive of hi) */
 export const range2 = (lo: number, hi: number) =>
   range(hi - lo).map((x) => x + lo);
+/** lo, lo + step, lo + 2*step, ... exclusive of hi */
+export const range3 = (lo: number, hi: number, step: number) =>
+  range(((hi - lo + step - 1) / step) | 0).map((i) => i * step + lo);
+export const index = <T>(arr: T[], indices: number[]) =>
+  indices.map((i) => arr[i]);
 export function sliceStepped<T>(a: Iterable<T>, start: number, step: number) {
   const L = [...a];
   if (start >= L.length)

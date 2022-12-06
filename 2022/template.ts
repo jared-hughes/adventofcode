@@ -6,7 +6,7 @@ import {
   words, chr, ord, reverse,
   /* Arrays */ sort, sortByKey, max, min, sum, prod, isAllEqual, isIncreasing,
   isStrictlyIncreasing, isDecreasing, isStrictlyDecreasing, overlappingSlices,
-  slices, range, range2, sliceStepped, uniq, dropAtIndex,
+  slices, range, range2, range3, index, sliceStepped, uniq, dropAtIndex,
   /* 2D Arrays */ transpose, permutations, cartesianProduct, cartesianPower,
   /* Sets */ set, intersect, union, setdiff, symdiff
 
