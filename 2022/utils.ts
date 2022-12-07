@@ -77,6 +77,8 @@ export function sliceStepped<T>(a: Iterable<T>, start: number, step: number) {
 export const uniq = <T>(a: Iterable<T>) => [...set(a)];
 export const dropAtIndex = <T>(a: T[], i: number) =>
   a.slice(0, i).concat(a.slice(i + 1));
+export const prefixes = <T>(a: T[]) => a.map((_, i) => a.slice(0, i + 1));
+export const suffixes = <T>(a: T[]) => a.map((_, i) => a.slice(i));
 
 /* 2D arrays */
 export const transpose = <T>(a: T[][]) =>

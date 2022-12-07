@@ -1,4 +1,4 @@
-import { getInput, clog, int, min, sum, range } from "./utils";
+import { getInput, clog, int, min, sum, prefixes } from "./utils";
 
 let dataString = getInput("day07.in");
 
@@ -17,8 +17,8 @@ for (let r of dataString.split(/\$/g).slice(1)) {
     // ls
     for (let line of r.slice(3).split(/\n/g)) {
       if (!line.startsWith("dir")) {
-        range(pos.length + 1).forEach((i) => {
-          let pwd = "/" + pos.slice(0, i).join("/");
+        [[], ...prefixes(pos)].forEach((dir) => {
+          let pwd = "/" + dir.join("/");
           sizes.set(pwd, (sizes.get(pwd) ?? 0) + int(line));
         });
       }
