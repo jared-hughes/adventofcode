@@ -19,7 +19,7 @@ while (i < elems.length) {
   }
   x += elems[i];
   // string for part 2
-  s += abs((i % 40) - x) <= 1 ? "⎕" : " ";
+  s += abs((i % 40) - x) <= 1 ? "██" : "  ";
   i += 1;
   if (i % 40 == 20) {
     // total for part 1
