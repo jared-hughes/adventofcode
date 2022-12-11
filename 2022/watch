@@ -1,0 +1,2 @@
+#!/bin/bash -e
+watch -n 1 './run day11.ts 2>&1 | tee out.txt'
