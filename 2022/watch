@@ -1,2 +1,5 @@
 #!/bin/bash -e
-watch -n 1 './run day11.ts 2>&1 | tee out.txt'
+# Input. Remove leading zeros, if any
+DAY="${1##0}"
+FILENAME="day$[DAY/10]$[DAY%10].ts"
+watch -n 1 "./run $FILENAME 2>&1 | tee out.txt"
