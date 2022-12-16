@@ -1,17 +1,4 @@
-import * as math from "mathjs";
-// prettier-ignore
-import {
-  /* Misc */ getInput, print, clog,
-  /* Strings */ int, ints, unsigned_ints, float, floats, unsigned_floats,
-  words, chr, ord, reverse,
-  /* Arrays */ sort, sortByKey, max, min, sum, prod, isAllEqual, isAllDistinct, isIncreasing,
-  isStrictlyIncreasing, isDecreasing, isStrictlyDecreasing, overlappingSlices,
-  slices, range, range2, range3, index, sliceStepped, uniq, dropAtIndex,
-  prefixes, suffixes,
-  /* 2D Arrays */ transpose, permutations, cartesianProduct, cartesianPower,
-  /* Sets */ set, intersect, union, setdiff, symdiff
-
-} from "./utils";
+import { getInput, clog, ints, sort, sortByKey, sum } from "./utils";
 
 let dataString = getInput("day16.in");
 
@@ -81,7 +68,6 @@ function part1() {
         time_left: best.time_left - dt,
         curr: f,
       };
-      // clog(f, release_if_wait(tent), dt);
       if (dt <= best.time_left) q.push(tent);
     });
   }
