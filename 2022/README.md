@@ -22,3 +22,4 @@ Notes on contests I did:
 | 13             |      11:22 | 224    |      14:04 | 126    | Goofed up for a while on part 1 by using `or` instead of `&&`. This would not be a problem with pattern matching |
 | 14             |       8:33 | 39     |      12:30 | 59     | Wasted time on part 2 by overthinking (subtracting area from triangle lol), but worked out yay                   | Get started on those grid helpers, including display. One useful tool: line between two points.                                              |
 | 15             |       8:55 | 45     |      29:02 | 125    | Alright. Should have drawn a picture earlier on part 2 rather than keeping it in head                            |
+| 16             |      30:53 | 185    |      48:50 | 50     | Ayy, fun difficult one                                                                                           |
