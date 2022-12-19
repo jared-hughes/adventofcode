@@ -25,3 +25,4 @@ Notes on contests I did:
 | 16             |      30:53 | 185    |      48:50 | 50     | Ayy, fun difficult one                                                                                           |
 | 17             |      15:26 | 17     |      36:55 | 67     | Yay, worked out well, except off-by-one `rocksAdded` on part 2                                                   |
 | 18             |       4:09 | 291    |       9:15 | 31     | Messed up with two incorrect answers on part 1 (silly errors) and one on part 2. I'll take top 31 part 2 lol     | Implement custom sets and stuff, or switch to python/coconut smh.                                                                            |
+| 19             |      42:34 | 68     |    1:18:30 | 331    | Still bad; solution hardly works, too many heuristics.                                                           |
