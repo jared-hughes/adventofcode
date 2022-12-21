@@ -27,3 +27,4 @@ Notes on contests I did:
 | 18             |       4:09 | 291    |       9:15 | 31     | Messed up with two incorrect answers on part 1 (silly errors) and one on part 2. I'll take top 31 part 2 lol     | Implement custom sets and stuff, or switch to python/coconut smh.                                                                            |
 | 19             |      42:34 | 68     |    1:18:30 | 331    | Still bad; solution hardly works, too many heuristics.                                                           |
 | 20             |       9:59 | 25     |    1:00:59 | 1171   | Lmao that rank ratio. Assumed there were no duplicates on part 2 :(.                                             |
+| 21             |       4:54 | 138    |      11:33 | 35     | Cheesed out part 2 with Mathematica `Solve`                                                                      |
