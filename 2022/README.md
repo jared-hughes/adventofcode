@@ -28,3 +28,4 @@ Notes on contests I did:
 | 19             |      42:34 | 68     |    1:18:30 | 331    | Still bad; solution hardly works, too many heuristics.                                                           |
 | 20             |       9:59 | 25     |    1:00:59 | 1171   | Lmao that rank ratio. Assumed there were no duplicates on part 2 :(.                                             |
 | 21             |       4:54 | 138    |      11:33 | 35     | Cheesed out part 2 with Mathematica `Solve`                                                                      |
+| 22             |      11:10 | 13     |    1:48:12 | 459    | Part 2 was a doozy. Who decided to make the input shape different than the example >:(                           |
