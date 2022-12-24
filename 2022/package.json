@@ -15,6 +15,7 @@
     "prettier": "^2.8.0"
   },
   "dependencies": {
+    "heap-js": "^2.2.0",
     "mathjs": "^11.4.0"
   }
 }
