@@ -31,3 +31,4 @@ Notes on contests I did:
 | 22             |      11:10 | 13     |    1:48:12 | 459    | Part 2 was a doozy. Who decided to make the input shape different than the example >:(                           |
 | 23             |      27:01 | 236    |      31:50 | 283    | Goofied part 1 with a typo :( plus under-annotated typescript plus javascript looseness                          |
 | 24             |    1:05:23 | 1183   |    1:21:24 | 1251   | Made a silly assumption on part 1 which led me to forget to avoid re-visiting nodes, oh well                     |
+| 25             |       3:55 | 6      |       4:03 | 6      | Ayy epic improvement from the last one                                                                           |
